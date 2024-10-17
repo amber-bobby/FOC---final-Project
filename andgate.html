@@ -129,8 +129,8 @@
   <script>
     // JavaScript function to handle AND gate logic
     function and() {
-      const inputOne = document.getElementById("toggleImage").src.includes("button-on");
-      const inputTwo = document.getElementById("toggleImage2").src.includes("button-on");
+      const inputOne = document.getElementById("toggleImage").src.includes("onbutton.PNG");
+      const inputTwo = document.getElementById("toggleImage2").src.includes("onbutton.PNG");
 
       if (inputOne && inputTwo) {
         document.getElementById("andGate").src = "and2on.png";
@@ -146,7 +146,7 @@
     // Toggling first button image
     function toggleImage() {
       const img = document.getElementById("toggleImage");
-      if (img.src.includes("button-off")) {
+      if (img.src.includes("offbutton.PNG")) {
         img.src = "onbutton.PNG";
       } else {
         img.src = "offbutton.PNG";
@@ -157,7 +157,7 @@
     // Toggling second button image
     function toggleImage2() {
       const img = document.getElementById("toggleImage2");
-      if (img.src.includes("button-off")) {
+      if (img.src.includes("offbutton.PNG")) {
         img.src = "onbutton.PNG";
       } else {
         img.src = "offbutton.PNG";
