@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoC - UNICODE Converter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 15px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #d1e5ff;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(90deg, rgb(63, 120, 244), rgb(245, 89, 239));
+      border-radius: 10px;
+      height: 100px;
+    }
+    body {
+      background: linear-gradient(#D8E3FF, white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+    }
+    section {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1.5px solid #5468ff;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      background-color: rgba(219, 230, 240, 0.402);
+      box-sizing: border-box;
+      font-size: 1rem;
+      outline: none;
+    }
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+      display: block;
+      margin-bottom: 10px; /* Added margin for spacing */
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    #demo {
+      text-align: center;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h2>Project 5: UNICODE Converter</h2>
+    <hr>
+    <p>Please input UNICODE number:</p>
+    <input id="numb" type="text">
+    <button type="button" onclick="myFunction()" class="btn">Submit</button>
+    <div id="demo"></div>
+    <p><img src="uni1.jpg" style="width:100%; height:auto;"></p>
+    <p><img src="uni3.jpg" style="width:100%; height:auto;"></p>        
+    <p><img src="uni4.jpg" style="width:100%; height:auto;"></p>
+    <a href="index.html" class="btn btn-primary">Back to Home</a>
+  </section>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("numb").value;
+      var unicode = "&#x" + x;
+      document.getElementById("demo").innerHTML = unicode;
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

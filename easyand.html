@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoC -  And Gate (easy)</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    ::-webkit-scrollbar {
+      width: 15px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #d1e5ff;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(90deg, rgb(63, 120, 244), rgb(245, 89, 239));
+      border-radius: 10px;
+    }
+    body {
+      background: linear-gradient(#D8E3FF, white);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      color: #333;
+      overflow-y: scroll;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #007bff;
+    }
+    p {
+      font-size: 1rem;
+      color: #555;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+    .btn-back {
+      width: 50%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+      margin: 20px auto 0;
+      display: block;
+    }
+    .btn-back:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Project 2: And Gate (easy)</h2>
+      <button onclick="document.getElementById('myImage').src='and2off.PNG'">0 AND 0</button>
+    <button onclick="document.getElementById('myImage').src='andoffon.PNG'">0 AND 1</button>
+    <button onclick="document.getElementById('myImage').src='andonoff.PNG'">1 AND 0</button>
+    <button onclick="document.getElementById('myImage').src='and2on.png'">1 AND 1</button>
+    <img id="myImage" src="and2off.PNG" alt="AND Logic Gate">
+    <a href="index.html" class="btn-back">Back to Home</a>
+  </div>
+</body>
+</html>

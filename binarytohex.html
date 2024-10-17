@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoC - Binary to Hexadecimal Converter</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    ::-webkit-scrollbar {
+      width: 15px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #d1e5ff;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(90deg, rgb(63, 120, 244), rgb(245, 89, 239));
+      border-radius: 10px;
+    }
+    body {
+      background: linear-gradient(#D8E3FF, white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #007bff;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border: 1.5px solid #5468ff;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      background-color: rgba(219, 230, 240, 0.402);
+      font-size: 1rem;
+      outline: none;
+    }
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    #demo {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+    .btn-back {
+      width: 50%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      margin: 20px auto 0;
+    }
+    .btn-back:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Project 3: Binary to Hexadecimal</h2>
+    <img src="bintohex.jpg" alt="Binary to Hexadecimal">
+    <p>Enter any 4-digit binary number:</p>
+    <input type="text" id="inputBin" maxlength="4" pattern="[01]{4}" placeholder="e.g. 1101" oninput="binToHex()">
+    <p>Hexadecimal Value:</p>
+    <p id="demo">-</p>
+    <a href="index.html" class="btn-back">Back to Home</a>
+  </div>
+
+  <script>
+    function binToHex() {
+      var x = document.getElementById("inputBin").value;
+      var hexOut = x.match(/^[01]{4}$/) ? parseInt(x, 2).toString(16).toUpperCase() : 'Invalid Binary Input';
+      document.getElementById("demo").innerHTML = hexOut;
+    }
+  </script>
+</body>
+</html>
