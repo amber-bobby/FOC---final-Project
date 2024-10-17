@@ -115,8 +115,8 @@
     <table class="table table-bordered">
       <tr>
         <td>
-          <img src="https://www.iconsdb.com/icons/preview/red/button-off-xxl.PNG" id="toggleImage" onclick="toggleImage();" /><br>
-          <img src="https://www.iconsdb.com/icons/preview/red/button-off-xxl.PNG" id="toggleImage2" onclick="toggleImage2();" />
+          <img src="offbutton.PNG" id="toggleImage" onclick="toggleImage();" /><br>
+          <img src="offbutton.PNG" id="toggleImage2" onclick="toggleImage2();" />
         </td>
         <td>
           <img id="andGate" src="and2off.PNG" alt="AND Gate">
@@ -147,9 +147,9 @@
     function toggleImage() {
       const img = document.getElementById("toggleImage");
       if (img.src.includes("button-off")) {
-        img.src = "https://www.iconsdb.com/icons/preview/green/button-on-xxl.PNG";
+        img.src = "onbutton.PNG";
       } else {
-        img.src = "https://www.iconsdb.com/icons/preview/red/button-off-xxl.PNG";
+        img.src = "offbutton.PNG";
       }
       and();  // Update AND gate logic whenever an input is toggled
     }
@@ -158,9 +158,9 @@
     function toggleImage2() {
       const img = document.getElementById("toggleImage2");
       if (img.src.includes("button-off")) {
-        img.src = "https://www.iconsdb.com/icons/preview/green/button-on-xxl.PNG";
+        img.src = "onbutton.PNG";
       } else {
-        img.src = "https://www.iconsdb.com/icons/preview/red/button-off-xxl.PNG";
+        img.src = "offbutton.PNG";
       }
       and();  // Update AND gate logic whenever an input is toggled
     }
